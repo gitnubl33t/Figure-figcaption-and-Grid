@@ -1,0 +1,62 @@
+
+/*FIGURE & CAPTION STYLING*/
+figure {
+  margin: 0; /* Turn off margin, set by browser */
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat: (3, auto);
+}
+
+/*CAPTION STYLING*/
+figcaption {
+  background-color: #111111;
+  color: white;
+  padding: 1rem;
+  opacity: 0.75;
+}
+
+/*hack: reduces the top margin on the h2, bottom on the p, and leaves a 0.5rem gap between the two */
+figcaption * {
+  margin: 0.5rem;
+}
+
+/*hack: makes images flexible */
+img {
+  width: 100%;
+}
+
+
+/* QUERIES */ 
+
+@media (min-width: 600px) {
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+  }
+}
+
+
+/* DEFAULT STYLING (set the layout to border box model) */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* FONT & BACKGROUND */
+body {
+  padding: 0;
+  border: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: #ED4264;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #ED4264, #FFEDBC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ED4264, #FFEDBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  //uigradients.com for the gradient + CSS
+}
